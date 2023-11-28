@@ -4,7 +4,6 @@
   <groupId>io.github.hms-douglas</groupId>
   <artifactId>wfe</artifactId>
   <version>1.0.0</version>
-  <packaging>aar</packaging>
   <name>hms-douglas/wfe</name>
   <description>Manual pom</description>
   <url>https://github.com/hms-douglas/wfe</url>
