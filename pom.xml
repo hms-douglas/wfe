@@ -42,4 +42,10 @@
       <version>1.1.1</version>
     </dependency>
   </dependencies>
+<repositories>
+    <repository>
+        <id>mavenCentral</id>
+        <url>https://repo1.maven.org/maven2/</url>
+    </repository>
+</repositories>
 </project>
