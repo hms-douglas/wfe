@@ -29,6 +29,11 @@
   </scm>
   <dependencies>
     <dependency>
+      <groupId>com.github.hms-douglas</groupId>
+      <artifactId>wfe</artifactId>
+      <version>1.0.7</version>
+    </dependency>
+    <dependency>
       <groupId>androidx.wear.watchface</groupId>
       <artifactId>watchface-editor-guava</artifactId>
       <version>1.1.1</version>
