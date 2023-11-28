@@ -5,7 +5,6 @@
   <groupId>io.github.hms-douglas</groupId>
   <artifactId>wfe</artifactId>
   <version>1.0.0</version>
-  <packaging>aar</packaging>
   <dependencies>
     <dependency>
       <groupId>androidx.wear.watchface</groupId>
