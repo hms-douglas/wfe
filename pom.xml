@@ -8,7 +8,6 @@
   <description>Manual pom</description>
   <url>https://github.com/hms-douglas/wfe</url>
   <inceptionYear>2023</inceptionYear>
-  <packaging>aar</packaging>
   <licenses>
     <license>
         <name>Apache License 2.0</name>
