@@ -18,7 +18,7 @@ See the [**documentation**](https://hms-douglas.github.io/wfe) for implementatio
 If you would like to support me, you can make a donation clicking on the button bellow... Thank you! :heart:
 <br/>
 <br/>
-<a href="www.google.com.br">
+<a href="https://www.paypal.com/donate/?hosted_button_id=QAHLC3GARUSVY">
   <img src="img/btn/donate_paypal.png" width="160" height="50"/>
 </a>
 
