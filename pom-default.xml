@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>io.github.hms-douglas</groupId>
   <artifactId>wfe</artifactId>
-  <version>t1.0.5</version>
+  <version>1.0.0</version>
   <packaging>aar</packaging>
   <name>hms-douglas/wfe</name>
   <description>Manual pom</description>
