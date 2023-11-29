@@ -1,0 +1,1909 @@
+<!-- Douglas Silva - 2023 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1">
+    <title>WFE :: Documentation</title>
+    <meta name="description" content="Watch Face Editor (WFE) is a library to help you creating editor/customizar for Watch Facer for Wear OS that uses the Jetpack Watch Face API.">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" id="favicon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/androidstudio.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <div id="top_bar">
+        <span id="library_name">WatchFaceEditor</span>
+        <span class="library_version"></span>
+        <a title="My page" id="logo" href="https://hms-douglas.github.io/" target="_blank" rel="noopener noreferrer"></a>
+        <a title="Project on github" id="github"  href="https://github.com/hms-douglas/wfe" target="_blank" rel="noopener noreferrer"></a>
+        <a title="Support me" id="support_me"  href="https://www.paypal.com/donate/?hosted_button_id=QAHLC3GARUSVY" target="_blank" rel="noopener noreferrer"></a>
+        <input id="toggle" type="checkbox">
+        <label for="toggle" id="ui-hamburger">
+            <div class="top"></div>
+            <div class="middle"></div>
+            <div class="bottom"></div>
+        </label>
+    </div>
+    <div id="sidebar">
+        <div class="sidebar_title showing">
+            <span data-goto="GETTING_STARTED">Getting started</span>
+
+            <div class="sidebar_subtitle" data-goto="DEPENDECIES">
+                <span>Add the dependecies</span>
+            </div>
+
+            <div class="sidebar_subtitle" data-goto="CREATE_ACTIVITY">
+                <span>Create the activity</span>
+            </div>
+    
+            <div class="sidebar_subtitle" data-goto="INIT">
+                <span>Init</span>
+            </div>
+        </div>
+
+        <div class="sidebar_title">
+            <span data-goto="WFE_ACTIVITY">WFEActivity</span>
+
+            <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="INIT_EDITOR">
+                <span>initEditor()</span>
+            </div>
+        </div>
+
+        <div class="sidebar_title">
+            <span data-goto="WFE_OPTION">WFEOption</span>
+
+            <div class="sidebar_subtitle">
+                <span data-goto="WFE_BOOLEAN_OPTION">WFEBooleanOption</span>
+                
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="WFE_BOOLEAN_OPTION_getId">
+                    <span>getId()</span>
+                </div>
+            </div>
+
+            <div class="sidebar_subtitle">
+                <span data-goto="WFE_LIST_OPTION">WFEListOption</span>
+                
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="WFE_LIST_OPTION_setFastScroll">
+                    <span>setFastScroll()</span>
+                </div>
+
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="WFE_LIST_OPTION_isFastScroll">
+                    <span>isFastScroll()</span>
+                </div>
+
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="WFE_LIST_OPTION_displayName">
+                    <span>setDisplayOptionNameWhenSelected()</span>
+                </div>
+
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="WFE_LIST_OPTION_isDisplayName">
+                    <span>isToDisplayOptionNameWhenSelected()</span>
+                </div>
+            </div>
+
+            <div class="sidebar_subtitle">
+                <span data-goto="WFE_COLOR_LIST_OPTION">WFEColorListOption</span>
+            
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="WFE_COLOR_LIST_OPTION_getId">
+                    <span>getId()</span>
+                </div>
+                
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="WFE_COLOR_LIST_OPTION_setFastScroll">
+                    <span>setFastScroll()</span>
+                </div>
+
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="WFE_COLOR_LIST_OPTION_isFastScroll">
+                    <span>isFastScroll()</span>
+                </div>
+            </div>
+
+            <div class="sidebar_subtitle">
+                <span data-goto="WFE_DYNAMIC_COLOR_PICKER_OPTION">WFEDynamicColorPickerOption</span>
+            </div>
+
+            <div class="sidebar_subtitle">
+                <span data-goto="WFE_STATIC_COLOR_PICKER_OPTION">WFEStaticColorPickerOption</span>
+            
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="WFE_STATIC_COLOR_PICKER_OPTION_setFastScroll">
+                    <span>setFastScroll()</span>
+                </div>
+
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="WFE_STATIC_COLOR_PICKER_OPTION_isFastScroll">
+                    <span>isFastScroll()</span>
+                </div>
+            </div>
+
+            <div class="sidebar_subtitle">
+                <span data-goto="WFE_COMPLICATION_OPTION">WFEComplicationOption</span>
+            </div>
+
+            <div class="sidebar_subtitle">
+                <span data-goto="WFE_DOUBLE_RANGE_OPTION">WFEDoubleRangeOption</span>
+                
+                <div class="sidebar_subtitle sidebar_subtitle-interface" data-goto="WFE_DOUBLE_RANGE_OPTION_interface">
+                    <span>@RangeLabel</span>
+                </div>
+
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="WFE_DOUBLE_RANGE_OPTION_getId">
+                    <span>getId()</span>
+                </div>
+
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="WFE_DOUBLE_RANGE_OPTION_setStep">
+                    <span>setStep()</span>
+                </div>
+
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="WFE_DOUBLE_RANGE_OPTION_getStep">
+                    <span>getStep()</span>
+                </div>
+                
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="WFE_DOUBLE_RANGE_OPTION_setRange">
+                    <span>setRangeLabel()</span>
+                </div>
+
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="WFE_DOUBLE_RANGE_OPTION_getRange">
+                    <span>getRangeLabel()</span>
+                </div>
+
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="WFE_DOUBLE_RANGE_OPTION_setFastScroll">
+                    <span>setFastScroll()</span>
+                </div>
+
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="WFE_DOUBLE_RANGE_OPTION_getFastScroll">
+                    <span>isFastScroll()</span>
+                </div>
+            </div>
+
+            <div class="sidebar_subtitle">
+                <span data-goto="WFE_LONG_RANGE_OPTION">WFELongRangeOption</span>
+                            
+                <div class="sidebar_subtitle sidebar_subtitle-interface" data-goto="WFE_LONG_RANGE_OPTION_interface">
+                    <span>@RangeLabel</span>
+                </div>
+
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="WFE_LONG_RANGE_OPTION_getId">
+                    <span>getId()</span>
+                </div>
+
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="WFE_LONG_RANGE_OPTION_setStep">
+                    <span>setStep()</span>
+                </div>
+
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="WFE_LONG_RANGE_OPTION_getStep">
+                    <span>getStep()</span>
+                </div>
+                
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="WFE_LONG_RANGE_OPTION_setRange">
+                    <span>setRangeLabel()</span>
+                </div>
+
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="WFE_LONG_RANGE_OPTION_getRange">
+                    <span>getRangeLabel()</span>
+                </div>
+
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="WFE_LONG_RANGE_OPTION_setFastScroll">
+                    <span>setFastScroll()</span>
+                </div>
+
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="WFE_LONG_RANGE_OPTION_getFastScroll">
+                    <span>isFastScroll()</span>
+                </div>
+            </div>
+
+            <div class="sidebar_subtitle">
+                <span data-goto="WFE_LABEL_OPTION">WFELabelOption</span>
+            </div>
+
+            <div class="sidebar_subtitle">
+                <span data-goto="WFE_BUTTON_OPTION">WFEButtonOption</span>
+            </div>
+
+            <div class="sidebar_subtitle">
+                <span data-goto="WFE_WATCHFACE_OPTION">WFEWatchfaceOption</span>
+            </div>
+        </div>
+
+        <div class="sidebar_title">
+            <span data-goto="WFE_SETTINGS">WFESettings</span>
+
+            <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="WFE_SETTINGS_setMainColor">
+                <span>setMainColor()</span>
+            </div>
+            
+            <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="WFE_SETTINGS_getMainColor">
+                <span>getMainColor()</span>
+            </div>
+
+            <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="WFE_SETTINGS_setBackgroundColor">
+                <span>setBackgroundColor()</span>
+            </div>
+            
+            <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="WFE_SETTINGS_getBackgroundColor">
+                <span>getBackgroundColor()</span>
+            </div>
+
+            <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="WFE_SETTINGS_setVibration">
+                <span>setVibrationFeedback()</span>
+            </div>
+
+            <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="WFE_SETTINGS_getVibration">
+                <span>isVibrationFeedbackEnabled()</span>
+            </div>
+
+            <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="WFE_SETTINGS_setScrollerColor">
+                <span>setScrollerColor()</span>
+            </div>
+
+            <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="WFE_SETTINGS_getScrollerColor">
+                <span>getScrollerColor()</span>
+            </div>
+
+            <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="WFE_SETTINGS_setAnimationId">
+                <span>setScaleAnimationDuration()</span>
+            </div>
+
+            <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="WFE_SETTINGS_getAnimationId">
+                <span>getScaleAnimationDuration()</span>
+            </div>
+
+            <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="WFE_SETTINGS_setPreviewDelay">
+                <span>setRenderPreviewDelay()</span>
+            </div>
+
+            <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="WFE_SETTINGS_getPreviewDelay">
+                <span>getRenderPreviewDelay()</span>
+            </div>
+        </div>
+
+        <div class="sidebar_title">
+            <span data-goto="EXTRA">Extra</span>
+
+            <div class="sidebar_subtitle sidebar_subtitle-resource" data-goto="ROTARY_INPUT">
+                <span>Rotary input</span>
+            </div>
+
+            <div class="sidebar_subtitle sidebar_subtitle-resource" data-goto="CLASS_EXAMPLE">
+                <span>YouActivityClassNameHere</span>
+            </div>
+        </div>
+        
+        <div class="sidebar_title">
+            <span data-goto="PREVIOUS_VERSION">Previous versions</span>
+        </div>
+
+        <div class="sidebar_title">
+            <span data-goto="LICENSE">License</span>
+        </div>
+
+        <div id="sidebar_topbar">
+            <div class="helper">
+                <a title="My page" id="logo" href="https://hms-douglas.github.io/" target="_blank" rel="noopener noreferrer"></a>
+                <a title="Project on github" id="github"  href="https://github.com/hms-douglas/wfe" target="_blank" rel="noopener noreferrer"></a>
+            </div>
+            <a title="Support me" id="support_me"  href="https://www.paypal.com/donate/?hosted_button_id=QAHLC3GARUSVY" target="_blank" rel="noopener noreferrer"></a>
+            <span class="library_version"></span>
+        </div>
+    </div>
+
+    <div id="documentation">
+        <div class="block" id="GETTING_STARTED">
+            <span class="title">Getting started</span>
+            
+            <div class="text">
+                <p>While creating my first watch face using the Jetpack Watch Face API I discovered that there is no standard editor in the smartwatches, and that for each new watch face it is necessary to create a new editor.</p>
+                <p>As I intend to develop more watch faces using the Jetpack API, and I like the design and interaction mode of the WFS editor, I decided to create a module, with a similar interface, to standardize and simplify the creation of editors. I also decided to share this module, as a library, to help others.</p>
+                <p>This documentation guides on how to implement the library and how to use/customize it.</p>
+            </div>
+
+            <div class="block sub_block" id="DEPENDECIES">
+                <span class="title">Add the dependecies</span>
+                
+                <div class="text">
+                    <p>Add the jitpack repository to your <span class="file_name">settings.gradle</span> file.</p> 
+                </div>
+<pre><code class="language-java">
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        //...
+
+        maven { url 'https://jitpack.io' } // &lt;== ADD THIS LINE
+    }
+}
+</code></pre>
+
+                <div class="text">
+                    <p>Add to your <span class="file_name">build.gradle</span> app module file the following dependency:</p> 
+                </div>
+<pre><code class="language-java">
+implementation 'com.github.hms-douglas:wfe:1.0.0'
+</code></pre>
+            </div>
+
+            <div class="block sub_block" id="CREATE_ACTIVITY">
+                <span class="title">Create the activity</span>
+                
+                <div class="text">
+                    <p>Declare an editor activity on you <span class="file_name">AndroidManifest.xml</span> file. The activity theme must be Theme.AppCompat.NoActionBar.</p> 
+                </div>
+<pre><code class="language-java">
+&lt;activity
+    android:name=".YouActivityClassNameHere"
+    android:exported="true"
+    android:theme="@style/Theme.AppCompat.NoActionBar"&gt;
+    
+    &lt;intent-filter&gt;
+        &lt;action android:name="androidx.wear.watchface.editor.action.WATCH_FACE_EDITOR"/&gt;
+
+        &lt;category android:name="com.google.android.wearable.watchface.category.WEARABLE_CONFIGURATION"/&gt;
+        &lt;category android:name="android.intent.category.DEFAULT"/&gt;
+    &lt;/intent-filter&gt;
+&lt;/activity&gt;
+</code></pre>
+
+                <div class="text">
+                    <p>Add to you watch face service tag the following meda data tag:</p> 
+                </div>
+
+<pre><code class="language-java">
+&lt;meta-data
+    android:name="com.google.android.wearable.watchface.wearableConfigurationAction"
+    android:value="androidx.wear.watchface.editor.action.WATCH_FACE_EDITOR"/&gt;
+</code></pre>
+
+                <div class="text">
+                    <p>Create your <span class="file_name"><span class="text_link" data-goto="CLASS_EXAMPLE">YouActivityClassNameHere</span></span></span> file. This activity/class must extend the <span class="text_link" data-goto="WFE_ACTIVITY">WFEActivity</span> class. Example:</p> 
+                </div>
+
+<pre><code class="language-java">
+public class YouActivityClassNameHere extends WFEActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
+}
+</code></pre>
+            </div>
+
+            <div class="block sub_block" id="INIT">
+                <span class="title">Init</span>
+                
+                <div class="text">
+                    <p>To create the editor you must call the <span class="text_link" data-goto="INIT_EDITOR">initEditor()</span> function, passing the parameters to define the design of the editor and the options screens you want it to render.</p> 
+                    <p>The <span class="text_link" data-goto="INIT_EDITOR">initEditor()</span> function must be called before the super.onCreate() of the activity you have created. Example:</p> 
+                </div>
+            
+<pre><code class="language-java">
+public class YouActivityClassNameHere extends WFEActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        //...
+
+        initEditor(listenableEditorSession, wfes, wfeol);
+
+        super.onCreate(savedInstanceState);
+    }
+}
+</code></pre>
+            </div>
+        </div>
+
+        <div class="block" id="WFE_ACTIVITY">
+            <span class="title">WFEActivity<span class="subtitle s s100"></span></span>
+            
+            <div class="text">
+                <p>Activity responsible for holding/rendering the editor.</p>
+            </div>
+
+            <div class="block sub_block" id="INIT_EDITOR">
+                <span class="title">initEditor()<span class="subtitle param"></span><span class="subtitle s s100"></span></span></span>
+
+                <table class="method_details">
+                    <tr>
+                        <th>Annotation</th>
+                        <th>Type</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>@Nullable</td>
+                        <td>ListenableEditorSession</td>
+                        <td>listenableEditorSession</td>
+                        <td>Used to get and set all the UserStyleSetting of the editor.<br>If null, the WFE will try to obtain it automatically. It is not recommended to set this parameter to null.</td>
+                    </tr>
+                    <tr>
+                        <td>@Nullable</td>
+                        <td><span class="text_link" data-goto="WFE_SETTINGS">WFESettings</span></td>
+                        <td>wfeSettings</td>
+                        <td>Object holding some style and behavior of the editor user interface.<br>If null, the default style and behavior will be applyed.</td>
+                    </tr>
+                    <tr>
+                        <td>@NonNull</td>
+                        <td>List&lt;<span class="text_link" data-goto="WFE_OPTION">WFEOption</span>&gt;</td>
+                        <td>wfeOptionList</td>
+                        <td>List containing all the options avaiable to be edited by the user. Each item of the list will result in one option/setting screen.</td>
+                    </tr>
+                </table>                    
+            </div>
+        </div>
+
+        <div class="block" id="WFE_OPTION">
+            <span class="title">WFEOption<span class="subtitle s s100"></span></span>
+            
+            <div class="text">
+                <p>Class responsible for holding each option screen.</p>
+            </div>
+
+            <div class="block sub_block" id="WFE_BOOLEAN_OPTION">
+                <span class="title">WFEBooleanOption<span class="subtitle const"></span><span class="subtitle s s100"></span></span>
+                
+                <div class="text">
+                    <p>Class responsible for rendering the boolean option screen. The user can swipe up and down to toggle the option.</p>
+                </div>
+    
+                <table class="method_details">
+                    <tr>
+                        <th>Annotation</th>
+                        <th>Type</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>@NonNull</td>
+                        <td>UserStyleSetting.Id</td>
+                        <td>id</td>
+                        <td>Id used to create the BooleanUserStyleSetting. This constructor will try to get the displayName used during the creation of the BooleanUserStyleSetting.</td>
+                    </tr>
+                </table> 
+
+                <table class="method_details">
+                    <tr>
+                        <th>Annotation</th>
+                        <th>Type</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>@NonNull</td>
+                        <td>UserStyleSetting.Id</td>
+                        <td>id</td>
+                        <td>Id used to create the BooleanUserStyleSetting.</td>
+                    </tr>
+                    <tr>
+                        <td>@NonNull</td>
+                        <td>String</td>
+                        <td>customLabel</td>
+                        <td>Custom label to be displayed at the top of the screen.</td>
+                    </tr>
+                </table> 
+                
+                <div class="block sub_block" id="WFE_BOOLEAN_OPTION_getId">
+                    <span class="title">getId()<span class="subtitle ret"></span><span class="subtitle s s100"></span></span>
+                
+                    <table class="method_details">
+                        <tr>
+                            <th>Type</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>UserStyleSetting.Id</td>
+                            <td>Id passed to the constructor representing the corresponding BooleanUserStyleSetting.</td>
+                        </tr>
+                    </table> 
+                </div>
+
+                <div class="block sub_block" id="WFE_BOOLEAN_OPTION">
+                    <span class="title">User Interface</span>
+                
+                    <div class="screenshots">
+                        <img src="img/ui/b_0.png" loading="lazy">
+                    </div>
+                </div>
+            </div>
+
+            <div class="block sub_block sub_block2" id="WFE_LIST_OPTION">
+                <span class="title">WFEListOption<span class="subtitle const"></span><span class="subtitle s s100"></span></span>
+                
+                <div class="text multiline">
+                    <p>Class responsible for rendering the basic list option screen.</p>
+                    <p>The user can swipe up and down to switch between each list item.</p>
+                    <p>The list "scrollbar" will render up to 12 items. If the list contains more the 12 items, a plus sign will be displayed at the top/bottom, allowing the user to keep scrolling.</p>
+                </div>
+        
+                <table class="method_details">
+                    <tr>
+                        <th>Annotation</th>
+                        <th>Type</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>@NonNull</td>
+                        <td>UserStyleSetting.Id</td>
+                        <td>id</td>
+                        <td>Id used to create the ListUserStyleSetting. This constructor will try to get the displayName used during the creation of the ListUserStyleSetting.</td>
+                    </tr>
+                </table> 
+                
+                <table class="method_details">
+                    <tr>
+                        <th>Annotation</th>
+                        <th>Type</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>@NonNull</td>
+                        <td>UserStyleSetting.Id</td>
+                        <td>id</td>
+                        <td>Id used to create the ListUserStyleSetting.</td>
+                    </tr>
+                    <tr>
+                        <td>@NonNull</td>
+                        <td>String</td>
+                        <td>customLabel</td>
+                        <td>Custom label to be displayed at the top of the screen.</td>
+                    </tr>
+                </table> 
+
+                <div class="block sub_block" id="WFE_LIST_OPTION_setFastScroll">
+                    <span class="title">setFastScroll()<span class="subtitle param"></span><span class="subtitle s s100"></span></span>
+                
+                    <table class="method_details">
+                        <tr>
+                            <th>Annotation</th>
+                            <th>Type</th>
+                            <th>Default</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>@NonNull</td>
+                            <td>boolean</td>
+                            <td>true</td>
+                            <td>If true, the user can scroll through multiples items while swiping. If false, for each swipe the user will scroll only one item.</td>
+                        </tr>
+                    </table> 
+                </div>
+
+                <div class="block sub_block" id="WFE_LIST_OPTION_isFastScroll">
+                    <span class="title">isFastScroll()<span class="subtitle ret"></span><span class="subtitle s s100"></span></span>
+                
+                    <table class="method_details">
+                        <tr>
+                            <th>Type</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>boolean</td>
+                            <td>Whether fast scroll is enabled.</td>
+                        </tr>
+                    </table> 
+                </div>
+
+                <div class="block sub_block" id="WFE_LIST_OPTION_displayName">
+                    <span class="title">setDisplayOptionNameWhenSelected()<span class="subtitle param"></span><span class="subtitle s s100"></span></span>
+                
+                    <table class="method_details">
+                        <tr>
+                            <th>Annotation</th>
+                            <th>Type</th>
+                            <th>Default</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>@NonNull</td>
+                            <td>boolean</td>
+                            <td>false</td>
+                            <td>If true, a toast will be displayed with the displayName, of the selected item, set on the ListUserStyleSetting.ListOption.</td>
+                        </tr>
+                    </table> 
+                </div>
+
+                <div class="block sub_block" id="WFE_LIST_OPTION_isDisplayName">
+                    <span class="title">isToDisplayOptionNameWhenSelected()<span class="subtitle ret"></span><span class="subtitle s s100"></span></span>
+                
+                    <table class="method_details">
+                        <tr>
+                            <th>Type</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>boolean</td>
+                            <td>Whether a toast should be displayed with the displayName of the selected item.</td>
+                        </tr>
+                    </table> 
+                </div>
+
+                <div class="block sub_block" id="WFE_LIST_OPTION">
+                    <span class="title">User Interface</span>
+                
+                    <div class="screenshots">
+                        <img src="img/ui/l_0.png" loading="lazy">
+                        <img src="img/ui/l_1.png" loading="lazy">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="block sub_block sub_block2" id="WFE_COLOR_LIST_OPTION">
+                <span class="title">WFEColorListOption<span class="subtitle const"></span><span class="subtitle s s100"></span></span>
+                
+                <div class="text multiline">
+                    <p>Class responsible for rendering the basic color list option screen.</p>
+                    <p>The user can swipe up and down to switch between each color item.</p>
+                    <p>The list "scrollbar" will render up to 9 items, but more items will be displayed, if avaiable, while scrolling.</p>
+                    <p>This option uses the ListUserStyleSetting to render the colors.</p>
+                    <p>Each ListUserStyleSetting.ListOption will represent one item.</p>
+                    <p>Each color MUST be set, as hex string, in the displayName for each ListUserStyleSetting.ListOption. To display more than one color for item, separate each hex string using commans.</p>
+                </div>
+    
+<pre><code class="language-java">
+// Example of ListUserStyleSetting.ListOption (not part of the editor/constructor).
+
+new UserStyleSetting.ListUserStyleSetting.ListOption(
+    new UserStyleSetting.Option.Id("optionIdHere"),
+    getResources(),
+    R.string.option_string_here, // <<<< FOR ONE COLOR "#FF0000" 
+    null);
+
+// OR
+
+new UserStyleSetting.ListUserStyleSetting.ListOption(
+    new UserStyleSetting.Option.Id("optionIdHere"),
+    getResources(),
+    R.string.option_string_here, // <<<< FOR N COLORS "#FF0000, #00FF00, ..." 
+    null);
+</code></pre>
+
+                <table class="method_details">
+                    <tr>
+                        <th>Annotation</th>
+                        <th>Type</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>@NonNull</td>
+                        <td>UserStyleSetting.Id</td>
+                        <td>id</td>
+                        <td>Id used to create the ListUserStyleSetting. This constructor will try to get the displayName used during the creation of the ListUserStyleSetting.</td>
+                    </tr>
+                </table> 
+
+                <table class="method_details">
+                    <tr>
+                        <th>Annotation</th>
+                        <th>Type</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>@NonNull</td>
+                        <td>UserStyleSetting.Id</td>
+                        <td>id</td>
+                        <td>Id used to create the ListUserStyleSetting.</td>
+                    </tr>
+                    <tr>
+                        <td>@NonNull</td>
+                        <td>String</td>
+                        <td>customLabel</td>
+                        <td>Custom label to be displayed at the top of the screen.</td>
+                    </tr>
+                </table> 
+
+                <div class="block sub_block" id="WFE_COLOR_LIST_OPTION_getId">
+                    <span class="title">getId()<span class="subtitle ret"></span><span class="subtitle s s100"></span></span>
+                
+                    <table class="method_details">
+                        <tr>
+                            <th>Type</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>UserStyleSetting.Id</td>
+                            <td>Id passed to the constructor representing the corresponding ListUserStyleSetting.</td>
+                        </tr>
+                    </table> 
+                </div>
+
+                <div class="block sub_block" id="WFE_COLOR_LIST_OPTION_setFastScroll">
+                    <span class="title">setFastScroll()<span class="subtitle param"></span><span class="subtitle s s100"></span></span>
+                
+                    <table class="method_details">
+                        <tr>
+                            <th>Annotation</th>
+                            <th>Type</th>
+                            <th>Default</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>@NonNull</td>
+                            <td>boolean</td>
+                            <td>true</td>
+                            <td>If true, the user can scroll through multiples items while swiping. If false, for each swipe the user will scroll only one item.</td>
+                        </tr>
+                    </table> 
+                </div>
+
+                <div class="block sub_block" id="WFE_COLOR_LIST_OPTION_isFastScroll">
+                    <span class="title">isFastScroll()<span class="subtitle ret"></span><span class="subtitle s s100"></span></span>
+                
+                    <table class="method_details">
+                        <tr>
+                            <th>Type</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>boolean</td>
+                            <td>Whether fast scroll is enabled.</td>
+                        </tr>
+                    </table> 
+                </div>
+
+                <div class="block sub_block" id="WFE_COLOR_LIST_OPTION">
+                    <span class="title">User Interface</span>
+                
+                    <div class="screenshots">
+                        <img src="img/ui/cl_0.png" loading="lazy">
+                        <img src="img/ui/cl_1.png" loading="lazy">
+                        <img src="img/ui/cl_2.png" loading="lazy">
+                    </div>
+                </div>
+            </div>
+
+            <div class="block sub_block sub_block2" id="WFE_DYNAMIC_COLOR_PICKER_OPTION">
+                <span class="title">WFEDynamicColorPickerOption<span class="subtitle const"></span><span class="subtitle s s100"></span></span>
+                
+                <div class="text multiline">
+                    <p>Class responsible for rendering a color picker.</p>
+                    <p>The user can swipe up and down to scroll through the picker. If the user swipe on the left half of the screen, the left scroller will move. If the user swipe on the right half of the screen, the right scroller will move.</p>
+                    <p>This option uses the CustomValueUserStyleSetting to return the color picked. The color picked will be in string hex format (Example: "#FF0000").
+                    <p>The default UserStyleSetting.Id string for the CustomValueUserStyleSetting.CustomValueOption is "CustomValue".</p>
+                </div>
+
+                <div class="text">
+                    <p><b>*</b>Only one CustomValueUserStyleSetting is allowed. <u>This is a limitation of Wear OS.</u> Therefore this option will get in conflict with <span class="text_link" data-goto="WFE_STATIC_COLOR_PICKER_OPTION">WFEStaticColorPickerOption</span> if both options are added to the editor. This option will also get in conflict with itself if more than one is added to the editor.</p>
+                </div>
+
+                <table class="method_details">
+                    <tr>
+                        <th>Annotation</th>
+                        <th>Type</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>@NonNull</td>
+                        <td>String</td>
+                        <td>label</td>
+                        <td>Label to be displayed at the top of the screen.</td>
+                    </tr>
+                </table> 
+
+                <div class="block sub_block" id="WFE_DYNAMIC_COLOR_PICKER_OPTION">
+                    <span class="title">User Interface</span>
+                
+                    <div class="screenshots">
+                        <img src="img/ui/cd_0.png" loading="lazy">
+                        <img src="img/ui/cd_1.png" loading="lazy">
+                    </div>
+                </div>
+            </div>
+
+            <div class="block sub_block sub_block2" id="WFE_STATIC_COLOR_PICKER_OPTION">
+                <span class="title">WFEStaticColorPickerOption<span class="subtitle const"></span><span class="subtitle s s100"></span></span>
+                
+                <div class="text multiline">
+                    <p>Class responsible for rendering a color picker in list format.</p>
+                    <p>The user can swipe up and down to switch between each list item.</p>
+                    <p>This option uses the CustomValueUserStyleSetting to return the color picked. The color picked will be in string hex format (Example: "#FF0000").
+                    <p>The default UserStyleSetting.Id string for the CustomValueUserStyleSetting.CustomValueOption is "CustomValue".</p>
+                </div>
+
+                <div class="text">
+                    <p><b>*</b>Only one CustomValueUserStyleSetting is allowed. <u>This is a limitation of Wear OS.</u> Therefore this option will get in conflict with <span class="text_link" data-goto="WFE_DYNAMIC_COLOR_PICKER_OPTION">WFEDynamicColorPickerOption</span> if both options are added to the editor. This option will also get in conflict with itself if more than one is added to the editor.</p>
+                </div>
+
+                <table class="method_details">
+                    <tr>
+                        <th>Annotation</th>
+                        <th>Type</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>@NonNull</td>
+                        <td>String</td>
+                        <td>label</td>
+                        <td>Label to be displayed at the top of the screen.</td>
+                    </tr>
+                </table> 
+
+                <div class="block sub_block" id="WFE_STATIC_COLOR_PICKER_OPTION_setFastScroll">
+                    <span class="title">setFastScroll()<span class="subtitle param"></span><span class="subtitle s s100"></span></span>
+                
+                    <table class="method_details">
+                        <tr>
+                            <th>Annotation</th>
+                            <th>Type</th>
+                            <th>Default</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>@NonNull</td>
+                            <td>boolean</td>
+                            <td>true</td>
+                            <td>If true, the user can scroll through multiples items while swiping. If false, for each swipe the user will scroll only one item.</td>
+                        </tr>
+                    </table> 
+                </div>
+
+                <div class="block sub_block" id="WFE_STATIC_COLOR_PICKER_OPTION_isFastScroll">
+                    <span class="title">isFastScroll()<span class="subtitle ret"></span><span class="subtitle s s100"></span></span>
+                
+                    <table class="method_details">
+                        <tr>
+                            <th>Type</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>boolean</td>
+                            <td>Whether fast scroll is enabled.</td>
+                        </tr>
+                    </table> 
+                </div>
+
+                <div class="block sub_block" id="WFE_STATIC_COLOR_PICKER_OPTION">
+                    <span class="title">User Interface</span>
+                
+                    <div class="screenshots">
+                        <img src="img/ui/cs_0.png" loading="lazy">
+                        <img src="img/ui/cs_1.png" loading="lazy">
+                        <img src="img/ui/cs_2.png" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="block sub_block" id="WFE_STATIC_COLOR_PICKER_OPTION">
+                    <span class="title">Colors</span>
+                
+                    <div class="text">
+                        <p>129 colors are available in this color picker:</p>
+                    </div>
+
+                    <div class="colors">
+                        <div data-c="#FE3333"></div><div data-c="#FE5433"></div><div data-c="#FE7333"></div><div data-c="#FE8C33"></div><div data-c="#FEA833"></div><div data-c="#FEC033"></div><div data-c="#FED633"></div><div data-c="#FEE833"></div><div data-c="#FEFB33"></div><div data-c="#E8FE33"></div><div data-c="#D0FE33"></div><div data-c="#B7FE33"></div><div data-c="#9BFE33"></div><div data-c="#54FE33"></div><div data-c="#33FE54"></div><div data-c="#33FE76"></div><div data-c="#33FEA8"></div><div data-c="#33FED3"></div><div data-c="#33FEFB"></div><div data-c="#33D6FE"></div><div data-c="#33ABFE"></div><div data-c="#338FFE"></div><div data-c="#3370FE"></div><div data-c="#334EFE"></div><div data-c="#4233FE"></div><div data-c="#7633FE"></div><div data-c="#9B33FE"></div><div data-c="#C933FE"></div><div data-c="#E833FE"></div><div data-c="#FE33FB"></div><div data-c="#FE33E2"></div><div data-c="#FE33C3"></div><div data-c="#FE33A1"></div><div data-c="#FE337C"></div><div data-c="#FE3373"></div><div data-c="#FF0000"></div><div data-c="#FF2700"></div><div data-c="#FF4600"></div><div data-c="#FF7C00"></div><div data-c="#FFB200"></div><div data-c="#FFF000"></div><div data-c="#E8FF00"></div><div data-c="#B2FF00"></div><div data-c="#7CFF00"></div><div data-c="#4DFF00"></div><div data-c="#13FF00"></div><div data-c="#00FF23"></div><div data-c="#00FF6C"></div><div data-c="#00FFB9"></div><div data-c="#00FFFB"></div><div data-c="#00C1FF"></div><div data-c="#0087FF"></div><div data-c="#0042FF"></div><div data-c="#0004FF"></div><div data-c="#4600FF"></div><div data-c="#7400FF"></div><div data-c="#9E00FF"></div><div data-c="#C900FF"></div><div data-c="#F700FF"></div><div data-c="#FF00CD"></div><div data-c="#FF00A6"></div><div data-c="#FF0083"></div><div data-c="#FF8383"></div><div data-c="#FFA483"></div><div data-c="#FFBB83"></div><div data-c="#FFD483"></div><div data-c="#FFF083"></div><div data-c="#F6FF83"></div><div data-c="#D7FF83"></div><div data-c="#BBFF83"></div><div data-c="#A1FF83"></div><div data-c="#83FF86"></div><div data-c="#83FFA4"></div><div data-c="#83FFC8"></div><div data-c="#83FFE3"></div><div data-c="#83FFF9"></div><div data-c="#83E6FF"></div><div data-c="#83C3FF"></div><div data-c="#839BFF"></div><div data-c="#8E83FF"></div><div data-c="#B283FF"></div><div data-c="#CE83FF"></div><div data-c="#E883FF"></div><div data-c="#FB83FF"></div><div data-c="#FF83EE"></div><div data-c="#FF83D9"></div><div data-c="#FF83BF"></div><div data-c="#FF83AE"></div><div data-c="#D99393"></div><div data-c="#D9A293"></div><div data-c="#D9AD93"></div><div data-c="#D9BF93"></div><div data-c="#D9D593"></div><div data-c="#BAD993"></div><div data-c="#A2D993"></div><div data-c="#93D999"></div><div data-c="#93D9AB"></div><div data-c="#93D9C1"></div><div data-c="#93D5D9"></div><div data-c="#93C4D9"></div><div data-c="#93B7D9"></div><div data-c="#93A4D9"></div><div data-c="#9399D9"></div><div data-c="#9D93D9"></div><div data-c="#A693D9"></div><div data-c="#B493D9"></div><div data-c="#C193D9"></div><div data-c="#CD93D9"></div><div data-c="#D993D7"></div><div data-c="#D993CB"></div><div data-c="#D993BB"></div><div data-c="#FFFFFF"></div><div data-c="#F5F5F5"></div><div data-c="#E9E9E9"></div><div data-c="#DCDCDC"></div><div data-c="#D3D3D3"></div><div data-c="#C6C6C6"></div><div data-c="#B9B9B9"></div><div data-c="#AEAEAE"></div><div data-c="#A1A1A1"></div><div data-c="#979797"></div><div data-c="#898989"></div><div data-c="#787878"></div><div data-c="#686868"></div><div data-c="#5D5D5D"></div><div data-c="#4E4E4E"></div><div data-c="#404040"></div><div data-c="#2B2B2B"></div><div data-c="#000000"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block sub_block sub_block2" id="WFE_COMPLICATION_OPTION">
+                <span class="title">WFEComplicationOption<span class="subtitle const"></span><span class="subtitle s s100"></span></span>
+                
+                <div class="text multiline">
+                    <p>Class responsible for rendering a complication picker.</p>
+                    <p>The user can tap on the desired slot to add a complication.</p>
+                    <p>This option screen can be used multiple times.</p>
+                </div>
+
+                <table class="method_details">
+                    <tr>
+                        <th>Annotation</th>
+                        <th>Type</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>This constructor receives no parameters. It will try to display all complications that are registered in your ComplicationSlotsManager. By default the label displayed using this constructor is "Complication" (for "pt-BR" language the default label will be "Info. Extra").</td>
+                    </tr>
+                </table> 
+
+                <table class="method_details">
+                    <tr>
+                        <th>Annotation</th>
+                        <th>Type</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>@NonNull</td>
+                        <td>String</td>
+                        <td>customLabel</td>
+                        <td>This constructor will try to display all complications that are registered in your ComplicationSlotsManager, along with a custom label to be displayed at the top of the screen.</td>
+                    </tr>
+                </table> 
+
+                <table class="method_details">
+                    <tr>
+                        <th>Annotation</th>
+                        <th>Type</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>@NonNull</td>
+                        <td>int...</td>
+                        <td>ids</td>
+                        <td>IDs of the ComplicationSlots that should be displayed. If the ID is not passed, the complication slot picker will not be rendered in this screen. By default the label displayed using this constructor is "Complication" (for "pt-BR" language the default label will be "Info. Extra").</td>
+                    </tr>
+                </table>
+
+                <table class="method_details">
+                    <tr>
+                        <th>Annotation</th>
+                        <th>Type</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>@NonNull</td>
+                        <td>String</td>
+                        <td>customLabel</td>
+                        <td>Custom label to be displayed at the top of the screen.</td>
+                    </tr>
+                    <tr>
+                        <td>@NonNull</td>
+                        <td>int...</td>
+                        <td>ids</td>
+                        <td>IDs of the ComplicationSlots that should be displayed. If the ID is not passed, the complication slot picker will not be rendered in this screen.</td>
+                    </tr>
+                </table>
+
+                <div class="block sub_block" id="WFE_COMPLICATION_OPTION">
+                    <span class="title">User Interface</span>
+                
+                    <div class="screenshots">
+                        <img src="img/ui/c_0.png" loading="lazy">
+                        <img src="img/ui/c_1.png" loading="lazy">
+                        <img src="img/ui/c_2.png" loading="lazy">
+                        <img src="img/ui/c_3.png" loading="lazy">
+                        <img src="img/ui/c_4.png" loading="lazy">
+                    </div>
+                </div>
+            </div>
+
+            <div class="block sub_block sub_block2" id="WFE_DOUBLE_RANGE_OPTION">
+                <span class="title">WFEDoubleRangeOption<span class="subtitle const"></span><span class="subtitle s s100"></span></span>
+                
+                <div class="text multiline">
+                    <p>Class responsible for rendering a range input. This range input allow decimal values.</p>
+                    <p>The minimum and maximum values are set in the DoubleRangeUserStyleSetting.</p>
+                </div>
+
+                <table class="method_details">
+                    <tr>
+                        <th>Annotation</th>
+                        <th>Type</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>@NonNull</td>
+                        <td>UserStyleSetting.Id</td>
+                        <td>id</td>
+                        <td>Id used to create the DoubleRangeUserStyleSetting. This constructor will try to get the displayName used during the creation of the DoubleRangeUserStyleSetting.</td>
+                    </tr>
+                </table> 
+                
+                <table class="method_details">
+                    <tr>
+                        <th>Annotation</th>
+                        <th>Type</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>@NonNull</td>
+                        <td>UserStyleSetting.Id</td>
+                        <td>id</td>
+                        <td>Id used to create the DoubleRangeUserStyleSetting.</td>
+                    </tr>
+                    <tr>
+                        <td>@NonNull</td>
+                        <td>String</td>
+                        <td>customLabel</td>
+                        <td>Custom label to be displayed at the top of the screen.</td>
+                    </tr>
+                </table> 
+
+                <div class="block sub_block" id="WFE_DOUBLE_RANGE_OPTION_interface">
+                    <span class="title">@RangeLabel<span class="subtitle inter"></span><span class="subtitle s s100"></span></span>
+                
+                    <div class="text multiline">
+                        <p>This screen can display a label, on the left side, showing the current value of the range.</p>
+                    </div>
+
+                    <table class="method_details">
+                        <tr>
+                            <th>Name</th>
+                            <th>Value</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>HIDE</td>
+                            <td>0</td>
+                            <td>Hide the label all the time.</td>
+                        </tr>
+                        <tr>
+                            <td>SHOW_ON_CHANGE</td>
+                            <td>1</td>
+                            <td>Shows the label during 800 ms when the user change the value.</td>
+                        </tr>
+                        <tr>
+                            <td>SHOW</td>
+                            <td>2</td>
+                            <td>Shows the label all the time.</td>
+                        </tr>
+                    </table> 
+                </div>
+
+                <div class="block sub_block" id="WFE_DOUBLE_RANGE_OPTION_getId">
+                    <span class="title">getId()<span class="subtitle ret"></span><span class="subtitle s s100"></span></span>
+                
+                    <table class="method_details">
+                        <tr>
+                            <th>Type</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>UserStyleSetting.Id</td>
+                            <td>Id passed to the constructor representing the corresponding DoubleRangeUserStyleSetting.</td>
+                        </tr>
+                    </table> 
+                </div>
+
+                <div class="block sub_block" id="WFE_DOUBLE_RANGE_OPTION_setStep">
+                    <span class="title">setStep()<span class="subtitle param"></span><span class="subtitle s s100"></span></span>
+                
+                    <table class="method_details">
+                        <tr>
+                            <th>Annotation</th>
+                            <th>Type</th>
+                            <th>Default</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>@NonNull</td>
+                            <td>double</td>
+                            <td>0.1d</td>
+                            <td>Set the value by which the range will increment/decrement when the user swipe.</td>
+                        </tr>
+                    </table> 
+                </div>
+
+                <div class="block sub_block" id="WFE_DOUBLE_RANGE_OPTION_getStep">
+                    <span class="title">getStep()<span class="subtitle ret"></span><span class="subtitle s s100"></span></span>
+                
+                    <table class="method_details">
+                        <tr>
+                            <th>Type</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>double</td>
+                            <td>Value by which the range will increment/decrement when the user swipe.</td>
+                        </tr>
+                    </table> 
+                </div>
+
+                <div class="block sub_block" id="WFE_DOUBLE_RANGE_OPTION_setRange">
+                    <span class="title">setRangeLabel()<span class="subtitle param"></span><span class="subtitle s s100"></span></span>
+                
+                    <table class="method_details">
+                        <tr>
+                            <th>Annotation</th>
+                            <th>Type</th>
+                            <th>Default</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>@NonNull</td>
+                            <td><span class="text_link" data-goto="WFE_DOUBLE_RANGE_OPTION_interface">@RangeLabel</span></td>
+                            <td><span class="text_link" data-goto="WFE_DOUBLE_RANGE_OPTION_interface">RangeLabel.HIDE</span></td>
+                            <td>Define the behavior of the label. By default the label is not displayed.</td>
+                        </tr>
+                    </table> 
+                </div>
+
+                <div class="block sub_block" id="WFE_DOUBLE_RANGE_OPTION_getRange">
+                    <span class="title">getRangeLabel()<span class="subtitle ret"></span><span class="subtitle s s100"></span></span>
+                
+                    <table class="method_details">
+                        <tr>
+                            <th>Type</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>[<span class="text_link" data-goto="WFE_DOUBLE_RANGE_OPTION_interface">@RangeLabel</span>] int</td>
+                            <td>The behavior of the label.</td>
+                        </tr>
+                    </table> 
+                </div>
+
+                <div class="block sub_block" id="WFE_DOUBLE_RANGE_OPTION_setFastScroll">
+                    <span class="title">setFastScroll()<span class="subtitle param"></span><span class="subtitle s s100"></span></span>
+                
+                    <table class="method_details">
+                        <tr>
+                            <th>Annotation</th>
+                            <th>Type</th>
+                            <th>Default</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>@NonNull</td>
+                            <td>boolean</td>
+                            <td>true</td>
+                            <td>If true, the user can increment/decrement multiples times while swiping. If false, for each swipe the user will increment/decrement one step only.</td>
+                        </tr>
+                    </table> 
+                </div>
+
+                <div class="block sub_block" id="WFE_DOUBLE_RANGE_OPTION_getFastScroll">
+                    <span class="title">isFastScroll()<span class="subtitle ret"></span><span class="subtitle s s100"></span></span>
+                
+                    <table class="method_details">
+                        <tr>
+                            <th>Type</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>boolean</td>
+                            <td>Whether fast scroll is enabled.</td>
+                        </tr>
+                    </table> 
+                </div>
+
+                <div class="block sub_block"id="WFE_DOUBLE_RANGE_OPTION">
+                    <span class="title">User Interface</span>
+                
+                    <div class="screenshots">
+                        <img src="img/ui/dr_0.png" loading="lazy">
+                        <img src="img/ui/dr_1.png" loading="lazy">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="block sub_block sub_block2" id="WFE_LONG_RANGE_OPTION">
+                <span class="title">WFELongRangeOption<span class="subtitle const"></span><span class="subtitle s s100"></span></span>
+                
+                <div class="text multiline">
+                    <p>Class responsible for rendering a range input. This range input allow only intergers.</p>
+                    <p>The minimum and maximum values are set in the LongRangeUserStyleSetting.</p>
+                </div>
+
+                <table class="method_details">
+                    <tr>
+                        <th>Annotation</th>
+                        <th>Type</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>@NonNull</td>
+                        <td>UserStyleSetting.Id</td>
+                        <td>id</td>
+                        <td>Id used to create the LongRangeUserStyleSetting. This constructor will try to get the displayName used during the creation of the LongRangeUserStyleSetting.</td>
+                    </tr>
+                </table> 
+                
+                <table class="method_details">
+                    <tr>
+                        <th>Annotation</th>
+                        <th>Type</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>@NonNull</td>
+                        <td>UserStyleSetting.Id</td>
+                        <td>id</td>
+                        <td>Id used to create the LongRangeUserStyleSetting.</td>
+                    </tr>
+                    <tr>
+                        <td>@NonNull</td>
+                        <td>String</td>
+                        <td>customLabel</td>
+                        <td>Custom label to be displayed at the top of the screen.</td>
+                    </tr>
+                </table> 
+
+                <div class="block sub_block" id="WFE_LONG_RANGE_OPTION_interface">
+                    <span class="title">@RangeLabel<span class="subtitle inter"></span><span class="subtitle s s100"></span></span>
+                
+                    <div class="text multiline">
+                        <p>This screen can display a label, on the left side, showing the current value of the range.</p>
+                    </div>
+
+                    <table class="method_details">
+                        <tr>
+                            <th>Name</th>
+                            <th>Value</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>HIDE</td>
+                            <td>0</td>
+                            <td>Hide the label all the time.</td>
+                        </tr>
+                        <tr>
+                            <td>SHOW_ON_CHANGE</td>
+                            <td>1</td>
+                            <td>Shows the label during 800 ms when the user change the value.</td>
+                        </tr>
+                        <tr>
+                            <td>SHOW</td>
+                            <td>2</td>
+                            <td>Shows the label all the time.</td>
+                        </tr>
+                    </table> 
+                </div>
+
+                <div class="block sub_block" id="WFE_LONG_RANGE_OPTION_getId">
+                    <span class="title">getId()<span class="subtitle ret"></span><span class="subtitle s s100"></span></span>
+                
+                    <table class="method_details">
+                        <tr>
+                            <th>Type</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>UserStyleSetting.Id</td>
+                            <td>Id passed to the constructor representing the corresponding LongRangeUserStyleSetting.</td>
+                        </tr>
+                    </table> 
+                </div>
+
+                <div class="block sub_block" id="WFE_LONG_RANGE_OPTION_setStep">
+                    <span class="title">setStep()<span class="subtitle param"></span><span class="subtitle s s100"></span></span>
+                
+                    <table class="method_details">
+                        <tr>
+                            <th>Annotation</th>
+                            <th>Type</th>
+                            <th>Default</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>@NonNull</td>
+                            <td>Long</td>
+                            <td>1L</td>
+                            <td>Set the value by which the range will increment/decrement when the user swipe.</td>
+                        </tr>
+                    </table> 
+                </div>
+
+                <div class="block sub_block" id="WFE_LONG_RANGE_OPTION_getStep">
+                    <span class="title">getStep()<span class="subtitle ret"></span><span class="subtitle s s100"></span></span>
+                
+                    <table class="method_details">
+                        <tr>
+                            <th>Type</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>Long</td>
+                            <td>Value by which the range will increment/decrement when the user swipe.</td>
+                        </tr>
+                    </table> 
+                </div>
+
+                <div class="block sub_block" id="WFE_LONG_RANGE_OPTION_setRange">
+                    <span class="title">setRangeLabel()<span class="subtitle param"></span><span class="subtitle s s100"></span></span>
+                
+                    <table class="method_details">
+                        <tr>
+                            <th>Annotation</th>
+                            <th>Type</th>
+                            <th>Default</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>@NonNull</td>
+                            <td><span class="text_link" data-goto="WFE_LONG_RANGE_OPTION_interface">@RangeLabel</span></td>
+                            <td><span class="text_link" data-goto="WFE_LONG_RANGE_OPTION_interface">RangeLabel.HIDE</span></td>
+                            <td>Define the behavior of the label. By default the label is not displayed.</td>
+                        </tr>
+                    </table> 
+                </div>
+
+                <div class="block sub_block" id="WFE_LONG_RANGE_OPTION_getRange">
+                    <span class="title">getRangeLabel()<span class="subtitle ret"></span><span class="subtitle s s100"></span></span>
+                
+                    <table class="method_details">
+                        <tr>
+                            <th>Type</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>[<span class="text_link" data-goto="WFE_LONG_RANGE_OPTION_interface">@RangeLabel</span>] int</td>
+                            <td>The behavior of the label.</td>
+                        </tr>
+                    </table> 
+                </div>
+
+                <div class="block sub_block" id="WFE_LONG_RANGE_OPTION_setFastScroll">
+                    <span class="title">setFastScroll()<span class="subtitle param"></span><span class="subtitle s s100"></span></span>
+                
+                    <table class="method_details">
+                        <tr>
+                            <th>Annotation</th>
+                            <th>Type</th>
+                            <th>Default</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>@NonNull</td>
+                            <td>boolean</td>
+                            <td>true</td>
+                            <td>If true, the user can increment/decrement multiples times while swiping. If false, for each swipe the user will increment/decrement one step only.</td>
+                        </tr>
+                    </table> 
+                </div>
+
+                <div class="block sub_block" id="WFE_LONG_RANGE_OPTION_getFastScroll">
+                    <span class="title">isFastScroll()<span class="subtitle ret"></span><span class="subtitle s s100"></span></span>
+                
+                    <table class="method_details">
+                        <tr>
+                            <th>Type</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>boolean</td>
+                            <td>Whether fast scroll is enabled.</td>
+                        </tr>
+                    </table> 
+                </div>
+
+                <div class="block sub_block" id="WFE_LONG_RANGE_OPTION">
+                    <span class="title">User Interface</span>
+                
+                    <div class="screenshots">
+                        <img src="img/ui/lr_0.png" loading="lazy">
+                        <img src="img/ui/lr_1.png" loading="lazy">
+
+                    </div>
+                </div> 
+            </div>
+
+            <div class="block sub_block sub_block2" id="WFE_LABEL_OPTION">
+                <span class="title">WFELabelOption<span class="subtitle const"></span><span class="subtitle s s100"></span></span>
+                
+                <div class="text">
+                    <p>Class responsible for rendering a scrollable text in the center of the screen.</p>
+                </div>
+    
+                <table class="method_details">
+                    <tr>
+                        <th>Annotation</th>
+                        <th>Type</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>@NonNull</td>
+                        <td>String</td>
+                        <td>label</td>
+                        <td>Text to be displayed in the screen.</td>
+                    </tr>
+                </table> 
+
+                <div class="block sub_block" id="WFE_LABEL_OPTION">
+                    <span class="title">User Interface</span>
+                
+                    <div class="screenshots">
+                        <img src="img/ui/label.png" loading="lazy">
+
+                    </div>
+                </div> 
+            </div>
+
+            <div class="block sub_block sub_block2" id="WFE_BUTTON_OPTION">
+                <span class="title">WFEButtonOption<span class="subtitle const"></span><span class="subtitle s s100"></span></span>
+                
+                <div class="text">
+                    <p>Class responsible for rendering a button in the center of the screen.</p>
+                </div>
+    
+                <table class="method_details">
+                    <tr>
+                        <th>Annotation</th>
+                        <th>Type</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>@NonNull</td>
+                        <td>String</td>
+                        <td>label</td>
+                        <td>Button label.</td>
+                    </tr>
+                    <tr>
+                        <td>@NonNull</td>
+                        <td>Runnable</td>
+                        <td>onClick</td>
+                        <td>Runnable to be executed when the user click on the button.</td>
+                    </tr>
+                </table> 
+
+                <div class="block sub_block" id="WFE_BUTTON_OPTION">
+                    <span class="title">User Interface</span>
+                
+                    <div class="screenshots">
+                        <img src="img/ui/button.png" loading="lazy">
+
+                    </div>
+                </div> 
+            </div>
+
+            <div class="block sub_block sub_block2" id="WFE_WATCHFACE_OPTION">
+                <span class="title">WFEWatchfaceOption<span class="subtitle const"></span><span class="subtitle s s100"></span></span>
+                
+                <div class="text multiline">
+                    <p>Class responsible for rendering a preview, in full screen, of the watch face.</p>
+                    <p>A toast will always show up when the user enter this screen.</p>
+                </div>
+    
+                <table class="method_details">
+                    <tr>
+                        <th>Annotation</th>
+                        <th>Type</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>This constructor receives no parameters. The default toast text value is "Preview" (for "pt-BR" language the default toast value will be "Prévia").</td>
+                    </tr>
+                </table> 
+
+                <table class="method_details">
+                    <tr>
+                        <th>Annotation</th>
+                        <th>Type</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>@Nullable</td>
+                        <td>String</td>
+                        <td>preview</td>
+                        <td>A custom text for the toast. If null, the default toast text value is "Preview" (for "pt-BR" language the default toast value will be "Prévia").</td>
+                    </tr>
+                </table> 
+
+                <div class="block sub_block" id="WFE_WATCHFACE_OPTION">
+                    <span class="title">User Interface<span class="subtitle">This watch face is just an example</span></span>
+                
+                    <div class="screenshots">
+                        <img src="img/ui/p_0.png" loading="lazy">
+                        <img src="img/ui/p_1.png" loading="lazy">
+                    </div>
+                </div> 
+            </div>
+        </div>
+
+        <div class="block" id="WFE_SETTINGS">
+            <span class="title">WFESettings<span class="subtitle s s100"></span></span>
+            
+            <div class="text">
+                <p>Class responsible for holding the design and behavior of the editor.</p>
+            </div>
+
+            <div class="block sub_block" id="WFE_SETTINGS_setMainColor">
+                <span class="title">setMainColor()<span class="subtitle param"></span><span class="subtitle s s100"></span></span>
+                    
+                <div class="text multiline">
+                    <p>The main color is used for:</p>
+                    <p class="multiline-list_item">Button background;</p>
+                    <p class="multiline-list_item">Top label;</p>
+                    <p class="multiline-list_item">Bottom label;</p>
+                    <p class="multiline-list_item">Highlights.</p>
+                </div>
+
+                <table class="method_details">
+                    <tr>
+                        <th>Annotation</th>
+                        <th>Type</th>
+                        <th>Default</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>@NonNull</td>
+                        <td>int</td>
+                        <td>-272549</td>
+                        <td>color</td>
+                        <td>Set the main color.</td>
+                    </tr>
+                </table> 
+
+                <table class="method_details">
+                    <tr>
+                        <th>Annotation</th>
+                        <th>Type</th>
+                        <th>Default</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>@NonNull</td>
+                        <td>String</td>
+                        <td>#FBD75B</td>
+                        <td>hex</td>
+                        <td>Set the main color. The parameter must be in hex format. Example: "#FF0000"</td>
+                    </tr>
+                </table> 
+            </div>
+
+            <div class="block sub_block" id="WFE_SETTINGS_getMainColor">
+                <span class="title">getMainColor()<span class="subtitle ret"></span><span class="subtitle s s100"></span></span>
+            
+                <table class="method_details">
+                    <tr>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>int</td>
+                        <td>The main color used.</td>
+                    </tr>
+                </table> 
+            </div>
+            
+            <div class="block sub_block" id="WFE_SETTINGS_setBackgroundColor">
+                <span class="title">setBackgroundColor()<span class="subtitle param"></span><span class="subtitle s s100"></span></span>
+                    
+                <div class="text multiline">
+                    <p>The color behind the watch face.</p>
+                </div>
+
+                <table class="method_details">
+                    <tr>
+                        <th>Annotation</th>
+                        <th>Type</th>
+                        <th>Default</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>@NonNull</td>
+                        <td>int</td>
+                        <td>-14869216</td>
+                        <td>color</td>
+                        <td>Set the background color.</td>
+                    </tr>
+                </table> 
+
+                <table class="method_details">
+                    <tr>
+                        <th>Annotation</th>
+                        <th>Type</th>
+                        <th>Default</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>@NonNull</td>
+                        <td>String</td>
+                        <td>#1D1D20</td>
+                        <td>hex</td>
+                        <td>Set the background color. The parameter must be in hex format. Example: "#FF0000"</td>
+                    </tr>
+                </table> 
+            </div>
+
+            <div class="block sub_block" id="WFE_SETTINGS_getBackgroundColor">
+                <span class="title">getBackgroundColor()<span class="subtitle ret"></span><span class="subtitle s s100"></span></span>
+            
+                <table class="method_details">
+                    <tr>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>int</td>
+                        <td>The background color used.</td>
+                    </tr>
+                </table> 
+            </div>  
+
+            <div class="block sub_block" id="WFE_SETTINGS_setVibration">
+                <span class="title">setVibrationFeedback()<span class="subtitle param"></span><span class="subtitle s s100"></span></span>
+                    
+                <div class="text multiline">
+                    <p>Vibration is used for:</p>
+                    <p class="multiline-list_item">List scrolling;</p>
+                    <p class="multiline-list_item">Tap feedback.</p>
+                </div>
+
+                <table class="method_details">
+                    <tr>
+                        <th>Annotation</th>
+                        <th>Type</th>
+                        <th>Default</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>@NonNull</td>
+                        <td>boolean</td>
+                        <td>true</td>
+                        <td>b</td>
+                        <td>If true, vibration will be enabled. If false, vibration will be disabled.</td>
+                    </tr>
+                </table> 
+            </div>
+
+            <div class="block sub_block" id="WFE_SETTINGS_getVibration">
+                <span class="title">isVibrationFeedbackEnabled()<span class="subtitle ret"></span><span class="subtitle s s100"></span></span>
+            
+                <table class="method_details">
+                    <tr>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>boolean</td>
+                        <td>Whether vibration is enabled.</td>
+                    </tr>
+                </table> 
+            </div>
+
+            <div class="block sub_block" id="WFE_SETTINGS_setScrollerColor">
+                <span class="title">setScrollerColor()<span class="subtitle param"></span><span class="subtitle s s100"></span></span>
+                    
+                <div class="text multiline">
+                    <p>The scroller color is used for:</p>
+                    <p class="multiline-list_item">Scroller;</p>
+                    <p class="multiline-list_item">Enabled scroller element.</p>
+                </div>
+
+                <table class="method_details">
+                    <tr>
+                        <th>Annotation</th>
+                        <th>Type</th>
+                        <th>Default</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>@NonNull</td>
+                        <td>int</td>
+                        <td>-272549</td>
+                        <td>color</td>
+                        <td>Set the scroller color.</td>
+                    </tr>
+                </table> 
+
+                <table class="method_details">
+                    <tr>
+                        <th>Annotation</th>
+                        <th>Type</th>
+                        <th>Default</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>@NonNull</td>
+                        <td>String</td>
+                        <td>#FBD75B</td>
+                        <td>hex</td>
+                        <td>Set the scroller color. The parameter must be in hex format. Example: "#FF0000"</td>
+                    </tr>
+                </table> 
+            </div>
+
+            <div class="block sub_block" id="WFE_SETTINGS_getScrollerColor">
+                <span class="title">getScrollerColor()<span class="subtitle ret"></span><span class="subtitle s s100"></span></span>
+            
+                <table class="method_details">
+                    <tr>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>int</td>
+                        <td>The scroller color used.</td>
+                    </tr>
+                </table> 
+            </div>
+
+            <div class="block sub_block" id="WFE_SETTINGS_setAnimationId">
+                <span class="title">setScaleAnimationDuration()<span class="subtitle param"></span><span class="subtitle s s100"></span></span>
+
+                <table class="method_details">
+                    <tr>
+                        <th>Annotation</th>
+                        <th>Type</th>
+                        <th>Default</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>@NonNull</td>
+                        <td>int</td>
+                        <td>400</td>
+                        <td>millis</td>
+                        <td>The space available for the watch face preview varies depending on the option screen being displayed. For that reason, the watch face preview is scalled to fit the available space. For a smooth interaction, the scaling is animated.</td>
+                    </tr>
+                </table> 
+            </div>
+
+            <div class="block sub_block" id="WFE_SETTINGS_getAnimationId">
+                <span class="title">getScaleAnimationDuration()<span class="subtitle ret"></span><span class="subtitle s s100"></span></span>
+            
+                <table class="method_details">
+                    <tr>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>int</td>
+                        <td>The scale animation duration in millis.</td>
+                    </tr>
+                </table> 
+            </div>
+
+            <div class="block sub_block" id="WFE_SETTINGS_setPreviewDelay">
+                <span class="title">setRenderPreviewDelay()<span class="subtitle param"></span><span class="subtitle s s100"></span></span>
+
+                <table class="method_details">
+                    <tr>
+                        <th>Annotation</th>
+                        <th>Type</th>
+                        <th>Default</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>@NonNull</td>
+                        <td>int</td>
+                        <td>1200</td>
+                        <td>millis</td>
+                        <td>Some changes may take some time to apply. To ensure that the preview is as accurate as possible, a delay is added. In other words, this time is the time that will take for the watch face preview reload once the user change an option inside the editor.</td>
+                    </tr>
+                </table> 
+            </div>
+
+            <div class="block sub_block" id="WFE_SETTINGS_getPreviewDelay">
+                <span class="title">getRenderPreviewDelay()<span class="subtitle ret"></span><span class="subtitle s s100"></span></span>
+            
+                <table class="method_details">
+                    <tr>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>int</td>
+                        <td>The render preview time delay in millis.</td>
+                    </tr>
+                </table> 
+            </div>
+        </div>
+
+        <div class="block" id="EXTRA">
+            <span class="title">Extra</span>
+            
+            <div class="block sub_block" id="ROTARY_INPUT">
+                <span class="title">Rotary input<span class="subtitle s s100"></span></span>
+                    
+                <div class="text multiline">
+                    <p>After Wear OS 4, Google is being obsessed with their guidelines for Wear OS. One of the guidelines is the rotary input.</p>
+                    <p>According to their documentation, every app must allow the user to scroll through screens and/or pickers using the rotary input. This guideline applies to watch faces editor/customizers as well. Therefore I implemented the rotary input feature in the WFE.</p>
+                    <p>Using the rotary input the user can:</p>
+                    <p class="multiline-list_item"><span class="text_link" data-goto="WFE_BOOLEAN_OPTION">WFEButtonOption</span>: toggle on/off;</p>
+                    <p class="multiline-list_item"><span class="text_link" data-goto="WFE_LIST_OPTION">WFEListOption</span>: navigate between the items;</p>
+                    <p class="multiline-list_item"><span class="text_link" data-goto="WFE_COLOR_LIST_OPTION">WFEColorListOption</span>: navigate between the colors;</p>
+                    <p class="multiline-list_item"><span class="text_link" data-goto="WFE_DYNAMIC_COLOR_PICKER_OPTION">WFEDynamicColorPickerOption</span>: move the picker up and down. To move the left picker, the user must tap on the left half of the screen. To move the right picker, the user must tap on the right half of the screen. By default, the right picker is focused;</p>
+                    <p class="multiline-list_item"><span class="text_link" data-goto="WFE_STATIC_COLOR_PICKER_OPTION">WFEStaticColorPickerOption</span>: navigate between the colors;</p>
+                    <p class="multiline-list_item"><span class="text_link" data-goto="WFE_COMPLICATION_OPTION">WFEComplicationOption</span>: no actions available;</p>
+                    <p class="multiline-list_item"><span class="text_link" data-goto="WFE_DOUBLE_RANGE_OPTION">WFEDoubleRangeOption</span>: increment/decrement the range value;</p>
+                    <p class="multiline-list_item"><span class="text_link" data-goto="WFE_LONG_RANGE_OPTION">WFELongRangeOption</span>: increment/decrement the range value;</p>
+                    <p class="multiline-list_item"><span class="text_link" data-goto="WFE_LABEL_OPTION">WFELabelOption</span>: scroll the text (if overflowed);</p>
+                    <p class="multiline-list_item"><span class="text_link" data-goto="WFE_BUTTON_OPTION">WFEButtonOption</span>: no actions available;</p>
+                    <p class="multiline-list_item"><span class="text_link" data-goto="WFE_WATCHFACE_OPTION">WFEWatchfaceOption</span>: no actions available.</p>
+                    <p>*To scroll through the options screen the user must swipe left and right.</p>
+                </div>
+            </div>
+
+            <div class="block sub_block" id="CLASS_EXAMPLE">
+                <span class="title">YouActivityClassNameHere<span class="subtitle custom">Example</span></span>
+
+<pre><code class="language-java" style="margin-top: 20px;">
+//Example on how to write your "YouActivityClassNameHere" activity class
+public class YouActivityClassNameHere extends WFEActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        final WFESettings settings = new WFESettings();
+
+        // Setting some design/style and behavior of the editor;
+        settings.setMainColor("#FF0000");
+        settings.setRenderPreviewDelay(1000);
+        settings.setVibrationFeedback(false);
+
+        // Option list / Each item will render a screen
+        final List&lt;WFEOption&gt; options = new ArrayList&lt;&gt;();
+
+        // Adding some boolean screens
+        options.add(new WFEBooleanOption(new UserStyleSetting.Id("show_secs"), "Show/hide seconds"));
+        options.add(new WFEBooleanOption(new UserStyleSetting.Id("dig_style")));
+
+        // Creating a basic list screen with some settings
+        final WFEListOption fonts = new WFEListOption(new UserStyleSetting.Id("font"), "Font style");
+
+        fonts.setDisplayOptionNameWhenSelected(true);
+        fonts.setFastScroll(false); 
+
+        // Adding the basic list screen
+        options.add(fonts);
+
+        // Adding a complication screen that allows the user to pick a complication for the ComplicationSlot.IDs 0 and 2
+        options.add(new WFEComplicationOption(0, 2));
+
+        // Adding another complication screen that allows the user to pick a complication for the ComplicationSlot.ID 1
+        options.add(new WFEComplicationOption(1));
+
+        // Adding a button screen
+        options.add(new WFEButtonOption("Hey, I'm a button!", () -&gt; {
+            // Action to be executed when the user clicks the button
+            Toast.makeText(this, "Clicked", Toast.LENGTH_SHORT).show();
+        }));
+
+        /*
+        * Init the editor UI
+        *
+        * Must be called before super.onCreate()
+        * It is NOT recommended to set the ListenableEditorSession to null like I did here!!!
+        * If null, the application will try to get it automatically...
+        */
+        initEditor(null, settings, options);
+
+        super.onCreate(savedInstanceState);
+    }
+}
+</code></pre>
+            </div>
+        </div>
+
+        <div class="block" id="PREVIOUS_VERSION">
+            <span class="title">Previous versions</span>
+
+            <div class="text multiline" style="margin-top: 20px;">
+                <p class="multiline-list_item">v1.0.0<span id="latest">Latest</span></p>
+            </div>
+        </div>
+
+        <div class="block" id="LICENSE" style="margin-bottom: 60px;">
+            <span class="title">License</span>
+
+            <div class="text multiline">
+                <p>Copyright 2023 Douglas Silva</p>
+                <p>Licensed under the Apache License, Version 2.0 (the "License"); you may not use this library except in compliance with the License. You may obtain a copy of the License at</p>
+
+                <p><a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank" rel="noopener noreferrer">http://www.apache.org/licenses/LICENSE-2.0</a></p>
+
+                <p>Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="toast"></div>
+
+    <!-- THIS PAGE USES "highlight.js" BY "highlightjs" AVAILABLE AT "https://highlightjs.org"-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <!-- THIS PAGE USES "hightlight-line-numbers" BY "wcoder" AVAILABLE AT "https://wcoder.github.io/highlightjs-line-numbers.js"-->
+    <script src="js/hightlight-line-numbers.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
