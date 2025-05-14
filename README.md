@@ -15,13 +15,18 @@ See the [**documentation**](https://hms-douglas.github.io/wfe) for implementatio
 <br/>
 <h2>Donations</h2>
 
-If you would like to support me, you can make a donation clicking on the button bellow... Thank you! :heart:
+If you would like to support me, you can use one of the options bellow... Thank you! :heart:
 <br/>
 <br/>
 <a href="https://www.paypal.com/donate/?hosted_button_id=QAHLC3GARUSVY">
   <img src="img/btn/donate_paypal.png" width="160" height="50"/>
 </a>
+</br>
 
+ Coin | Address
+----|----|
+Bitcoin | 3NkK4LMwMhKefe2phqf7Vrp1uQynu1Gs6x
+Ethereum | 0xfea5dd21ebf73c5b4a2445c7713f6b5316dfac4d
 <br/>
 <h2>License</h2>
 Copyright 2023 Douglas Silva
